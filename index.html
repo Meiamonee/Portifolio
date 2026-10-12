@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#F2EFE8">
+    <meta name="description" content="Portfólio de Pedro Souza, desenvolvedor Full Stack com foco em front-end.">
+    <title>Pedro Souza — Full Stack Developer</title>
+    <script>
+      document.documentElement.classList.add('js');
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('intro-playing');
+        window.introWatchdog = setTimeout(function () {
+          document.documentElement.classList.remove('intro-playing', 'intro-running');
+          var page = document.querySelector('.page');
+          if (page) page.inert = false;
+        }, 8000);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
