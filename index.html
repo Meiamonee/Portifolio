@@ -8,7 +8,12 @@
     <title>Pedro Souza — Full Stack Developer</title>
     <script>
       document.documentElement.classList.add('js');
-      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      try {
+        if (localStorage.getItem('site-motion') === 'reduced') {
+          document.documentElement.classList.add('motion-reduced');
+        }
+      } catch (_) {}
+      if (!document.documentElement.classList.contains('motion-reduced')) {
         document.documentElement.classList.add('intro-playing');
         window.introWatchdog = setTimeout(function () {
           document.documentElement.classList.remove('intro-playing', 'intro-running');

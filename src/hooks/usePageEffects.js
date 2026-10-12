@@ -4,7 +4,7 @@ export function usePageEffects() {
   // A espiral preserva o modo leve padrão e só aumenta a qualidade se houver FPS.
   useEffect(() => {
     const root = document.documentElement;
-    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reduce = root.classList.contains('motion-reduced');
     let cancelled = false;
     let startTimer;
     let mode = 'auto';
@@ -76,7 +76,7 @@ export function usePageEffects() {
 
   // A revelação visual só atua nas larguras menores e nunca oculta conteúdo sem JS.
   useEffect(() => {
-    if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window) || document.documentElement.classList.contains('motion-reduced')) return;
     const elements = document.querySelectorAll('.section-label,.lead-h2,.lead-p,.info>*,.skill,.job,.section-h2,.contact-title,.hero-photo');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
