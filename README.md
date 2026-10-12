@@ -37,10 +37,6 @@ npm run preview
 
 ## Interações
 
-A abertura usa o vídeo original por cerca de 5 segundos; `Escape` a pula. Preferência por movimento reduzido ou falha do vídeo levam diretamente à página. Para testar a qualidade da espiral, use `?spiral=lite` ou `?spiral=rich`.
-
-No desktop e tablet há um trilho numerado fixo à esquerda; no celular, um menu fixo inferior. Os projetos viram por toque/clique ou por `Enter`/`Espaço` no tablet e celular.
-
 As larguras são medidas em pixels CSS: celular até 767px, tablet de 768 a 1023px e desktop a partir de 1024px. O conteúdo é único, sem páginas HTML separadas por dispositivo.
 
 ## Créditos dos ícones
