@@ -1,4 +1,4 @@
-# Portfólio de Pedro Souza
+# Meu Portfólio
 
 Portfólio em React e Vite, com layouts próprios para celular, tablet e desktop. A página continua sendo uma experiência de uma só rota, com navegação por âncoras.
 
