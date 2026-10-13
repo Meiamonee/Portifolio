@@ -14,6 +14,7 @@ function useCompactLayout() {
 
 function ProjectCard({ project, compact }) {
   const [open, setOpen] = useState(false);
+  const [suppressHover, setSuppressHover] = useState(false);
   const pointerStart = useRef(null);
   useEffect(() => { if (!compact) setOpen(false); }, [compact]);
 
@@ -35,7 +36,8 @@ function ProjectCard({ project, compact }) {
   };
   const onProjectLinkClick = (event) => {
     const link = event.currentTarget;
-    if (compact) setOpen(false);
+    setOpen(false);
+    setSuppressHover(true);
     requestAnimationFrame(() => {
       link.blur();
       link.closest('.proj-card')?.blur();
@@ -43,10 +45,11 @@ function ProjectCard({ project, compact }) {
   };
 
   return (
-    <article className={`proj-card${open ? ' is-open' : ''}`} tabIndex={0}
+    <article className={`proj-card${open ? ' is-open' : ''}${suppressHover ? ' is-leaving' : ''}`} tabIndex={0}
       aria-label={`${open ? 'Ocultar detalhes de ' : 'Ver detalhes de '}${project.title}`}
       aria-expanded={open}
       onPointerDown={(event) => { pointerStart.current = { x: event.clientX, y: event.clientY }; }}
+      onPointerLeave={() => setSuppressHover(false)}
       onClick={onClick} onKeyDown={onKeyDown}>
       <div className="proj-num-bg" aria-hidden="true">{project.number}</div>
       <div className="proj-front">

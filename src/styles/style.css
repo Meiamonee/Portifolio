@@ -318,6 +318,9 @@ html.intro-playing,html.intro-playing body{overflow:hidden}
   .proj-card:hover{transform:translate(-5px,-5px);box-shadow:9px 9px 0 var(--acc)}
   .proj-card:hover .proj-back{transform:translateY(0)}
   .proj-card:hover .proj-hint .arrow{transform:translateX(8px)}
+  .proj-card.is-leaving,.proj-card.is-leaving:hover{transform:none;box-shadow:none}
+  .proj-card.is-leaving .proj-back,.proj-card.is-leaving:hover .proj-back{transform:translateY(101%)}
+  .proj-card.is-leaving:hover .proj-hint .arrow{transform:none}
 }
 
 /* ---- Experiência ---- */
