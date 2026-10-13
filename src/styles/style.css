@@ -311,9 +311,9 @@ html.intro-playing,html.intro-playing body{overflow:hidden}
   text-decoration-thickness:2px;text-underline-offset:5px;
 }
 
-/* o cartão sobe e o painel escuro aparece (mouse ou teclado) */
-.proj-card:focus,.proj-card:focus-within{transform:translate(-5px,-5px);box-shadow:9px 9px 0 var(--acc)}
-.proj-card:focus .proj-back,.proj-card:focus-within .proj-back{transform:translateY(0)}
+/* o cartão sobe e o painel escuro aparece (mouse ou foco visível de teclado) */
+.proj-card:focus-visible,.proj-card:has(.proj-link:focus-visible){transform:translate(-5px,-5px);box-shadow:9px 9px 0 var(--acc)}
+.proj-card:focus-visible .proj-back,.proj-card:has(.proj-link:focus-visible) .proj-back{transform:translateY(0)}
 @media (hover:hover){
   .proj-card:hover{transform:translate(-5px,-5px);box-shadow:9px 9px 0 var(--acc)}
   .proj-card:hover .proj-back{transform:translateY(0)}
@@ -391,7 +391,7 @@ html.intro-playing,html.intro-playing body{overflow:hidden}
   .proj-hint{display:none}
   .proj-back-meta,.proj-back-title{display:none}   /* já aparecem no topo do cartão */
   .proj-front{gap:56px;flex:none}
-  .proj-card:focus,.proj-card:focus-within{transform:none;box-shadow:none}
+  .proj-card:focus-visible,.proj-card:has(.proj-link:focus-visible){transform:none;box-shadow:none}
   .proj-card:hover{transform:none;box-shadow:none}
 }
 

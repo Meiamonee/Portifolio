@@ -2,7 +2,7 @@ export const assetPath = (name) => `${import.meta.env.BASE_URL}assets/${name}`;
 
 export const links = {
   github: 'https://github.com/Meiamonee',
-  linkedin: 'https://linkedin.com/in/pedrolsouza',
+  linkedin: 'https://www.linkedin.com/in/pedrolsouzadev',
   email: 'mailto:pedrolsouzafaria@hotmail.com',
   phone: 'tel:+5535984726490',
 };

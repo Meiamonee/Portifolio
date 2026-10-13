@@ -8,12 +8,24 @@
     <title>Pedro Souza — Full Stack Developer</title>
     <script>
       document.documentElement.classList.add('js');
+      var navigationEntry = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+      var isReload = navigationEntry ? navigationEntry.type === 'reload' : performance.navigation && performance.navigation.type === 1;
+      if (isReload) {
+        if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+        if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+        addEventListener('load', function () {
+          requestAnimationFrame(function () { scrollTo(0, 0); });
+        }, { once: true });
+      }
+      var introSeen = false;
       try {
+        introSeen = sessionStorage.getItem('intro-seen') === '1';
         if (localStorage.getItem('site-motion') === 'reduced') {
           document.documentElement.classList.add('motion-reduced');
         }
       } catch (_) {}
-      if (!document.documentElement.classList.contains('motion-reduced')) {
+      if (!introSeen && !document.documentElement.classList.contains('motion-reduced')) {
+        try { sessionStorage.setItem('intro-seen', '1'); } catch (_) {}
         document.documentElement.classList.add('intro-playing');
         window.introWatchdog = setTimeout(function () {
           document.documentElement.classList.remove('intro-playing', 'intro-running');

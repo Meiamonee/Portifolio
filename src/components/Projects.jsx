@@ -33,6 +33,14 @@ function ProjectCard({ project, compact }) {
       setOpen(false);
     }
   };
+  const onProjectLinkClick = (event) => {
+    const link = event.currentTarget;
+    if (compact) setOpen(false);
+    requestAnimationFrame(() => {
+      link.blur();
+      link.closest('.proj-card')?.blur();
+    });
+  };
 
   return (
     <article className={`proj-card${open ? ' is-open' : ''}`} tabIndex={0}
@@ -53,7 +61,8 @@ function ProjectCard({ project, compact }) {
         <h3 className="proj-back-title">{project.title}</h3>
         <p className="proj-desc">{project.description}</p>
         <div className="chips">{project.stack.map((name) => <span className="chip" key={name}>{name}</span>)}</div>
-        <a className="proj-link" href={project.href} target="_blank" rel="noopener noreferrer">Ver no GitHub →</a>
+        <a className="proj-link" href={project.href} target="_blank" rel="noopener noreferrer"
+          onClick={onProjectLinkClick}>Ver no GitHub →</a>
       </div>
     </article>
   );

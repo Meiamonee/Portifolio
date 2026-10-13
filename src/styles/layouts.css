@@ -61,7 +61,7 @@
   .section-h2{margin:0;font:400 clamp(40px,8vw,64px)/.95 var(--display);letter-spacing:-.03em}
   .projects-head{margin:0}
   .proj-grid{--acc:var(--green);padding-bottom:20px}
-  .proj-card:hover,.proj-card:focus,.proj-card:focus-within{transform:none;box-shadow:none}
+  .proj-card:hover,.proj-card:focus-visible,.proj-card:has(.proj-link:focus-visible){transform:none;box-shadow:none}
   .js .proj-card{position:relative;display:block;min-height:0;padding:0;border:0;border-radius:20px;background:transparent;perspective:1200px;cursor:pointer;-webkit-tap-highlight-color:transparent}
   .js .proj-card:nth-child(n){min-height:0}
   .js .proj-front,.js .proj-back{position:absolute;inset:0;display:flex;flex-direction:column;padding:22px;border-radius:20px;overflow:auto;backface-visibility:hidden;-webkit-backface-visibility:hidden;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
@@ -69,8 +69,8 @@
   .js .proj-back{z-index:0;gap:12px;background:var(--ink);color:var(--paper);transform:rotateY(180deg);visibility:hidden}
   .js .proj-card.is-open .proj-front{transform:rotateY(-180deg);visibility:hidden}
   .js .proj-card.is-open .proj-back{z-index:2;transform:none;visibility:visible}
-  .js .proj-card:focus .proj-back,.js .proj-card:focus-within .proj-back,.js .proj-card:hover .proj-back{transform:rotateY(180deg)}
-  .js .proj-card.is-open:focus .proj-back,.js .proj-card.is-open:focus-within .proj-back,.js .proj-card.is-open:hover .proj-back{transform:none}
+  .js .proj-card:focus-visible .proj-back,.js .proj-card:has(.proj-link:focus-visible) .proj-back,.js .proj-card:hover .proj-back{transform:rotateY(180deg)}
+  .js .proj-card.is-open:focus-visible .proj-back,.js .proj-card.is-open:has(.proj-link:focus-visible) .proj-back,.js .proj-card.is-open:hover .proj-back{transform:none}
   .js .proj-card:focus-visible .proj-front,.js .proj-card.is-open:focus-visible .proj-back{outline:2px solid var(--green);outline-offset:3px}
   .proj-num-bg{z-index:0;top:10px;right:16px;font:400 120px/1 var(--display);color:rgba(23,23,21,.06)}
   .proj-card.is-open .proj-num-bg{opacity:0}
