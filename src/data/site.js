@@ -94,10 +94,10 @@ export const projects = [
     href: 'https://github.com/Meiamonee/Power-Project',
   },
   {
-    number: '05', category: 'Aplicação Full Stack', title: 'Livraria',
-    description: 'Sistema para cadastrar, listar, editar e excluir livros, autores e categorias. Envia notificações de promoções em tempo real usando WebSocket.',
-    stack: ['Node.js', 'Express', 'JavaScript', 'WebSocket', 'HTML', 'CSS'],
-    href: 'https://github.com/Meiamonee/Livraria',
+    number: '05', category: 'Projeto Front-end', title: 'Portfólio Pessoal',
+    description: 'Portfólio profissional desenvolvido como uma experiência responsiva de página única. Reúne apresentação, competências, projetos e experiência com navegação por seções e animações interativas.',
+    stack: ['React', 'Vite', 'JavaScript', 'CSS'],
+    href: 'https://github.com/Meiamonee/Portifolio',
   },
   {
     number: '06', category: 'Projeto Front-end', title: 'Projeto Hat',
