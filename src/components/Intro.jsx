@@ -37,7 +37,7 @@ export function Intro() {
     const onPageShow = (event) => { if (event.persisted) finish(); };
     const onAnimationEnd = (event) => { if (event.animationName === 'intro-layer') finish(); };
 
-    if (root.classList.contains('motion-reduced') || !video || !root.classList.contains('intro-playing')) {
+    if (!video || !root.classList.contains('intro-playing')) {
       finish();
       return;
     }

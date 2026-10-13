@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { links } from '../data/site';
 
 function BrazilFlag() {
@@ -13,17 +12,6 @@ function BrazilFlag() {
 }
 
 export function Contact() {
-  const [reducedMotion, setReducedMotion] = useState(() =>
-    document.documentElement.classList.contains('motion-reduced')
-  );
-
-  const toggleMotion = () => {
-    const next = !reducedMotion;
-    document.documentElement.classList.toggle('motion-reduced', next);
-    try { localStorage.setItem('site-motion', next ? 'reduced' : 'full'); } catch { /* preferência opcional */ }
-    setReducedMotion(next);
-  };
-
   return (
     <footer className="contact" id="contato">
       <div className="contact-inner">
@@ -37,9 +25,6 @@ export function Contact() {
         </div>
         <div className="footer">
           <span>© 2026 Pedro Souza</span>
-          <button className="motion-toggle" type="button" aria-pressed={reducedMotion} onClick={toggleMotion}>
-            {reducedMotion ? 'Ativar efeitos' : 'Reduzir animações'}
-          </button>
           <span>Poços de Caldas, Minas Gerais, Brasil</span>
         </div>
       </div>

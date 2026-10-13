@@ -27,7 +27,7 @@
 /* ---------- Base ---------- */
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
-html:not(.motion-reduced){scroll-behavior:smooth}
+html{scroll-behavior:smooth}
 body{margin:0}
 img{max-width:100%}
 a{color:inherit}
@@ -357,11 +357,6 @@ html.intro-playing,html.intro-playing body{overflow:hidden}
   margin-top:96px;padding-top:24px;border-top:1px solid rgba(242,239,232,.3);
   font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;
 }
-.motion-toggle{
-  padding:0;border:0;border-bottom:1px solid currentColor;background:none;color:inherit;
-  font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer;
-}
-.motion-toggle:hover,.motion-toggle:focus-visible{color:var(--mint)}
 
 /* ==========================================================================
    DESKTOP — composição original
@@ -550,12 +545,3 @@ html.intro-playing,html.intro-playing body{overflow:hidden}
 /* ==========================================================================
    MOVIMENTO REDUZIDO: tudo fica parado, mas continua visível
    ========================================================================== */
-html.motion-reduced .nav-links a{transition:none}
-html.motion-reduced.intro-playing,html.motion-reduced.intro-playing body{overflow:auto}
-html.motion-reduced.intro-playing .site-intro{display:none;animation:none}
-html.motion-reduced.intro-playing .page{animation:none}
-html.motion-reduced .proj-card,html.motion-reduced .proj-back,html.motion-reduced .proj-hint .arrow{transition:none}
-html.motion-reduced .sp-a,html.motion-reduced.spiral-rich .sp-b,html.motion-reduced.spiral-rich .sp-c{animation:none;will-change:auto}
-html.motion-reduced .stack-track{animation:none;transform:none;width:auto;flex-wrap:wrap;justify-content:center;will-change:auto}
-html.motion-reduced .stack-set[aria-hidden="true"]{display:none}
-html.motion-reduced .stack-set{flex-wrap:wrap;justify-content:center;row-gap:8px;padding-right:0}

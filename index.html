@@ -20,11 +20,8 @@
       var introSeen = false;
       try {
         introSeen = sessionStorage.getItem('intro-seen') === '1';
-        if (localStorage.getItem('site-motion') === 'reduced') {
-          document.documentElement.classList.add('motion-reduced');
-        }
       } catch (_) {}
-      if (!introSeen && !document.documentElement.classList.contains('motion-reduced')) {
+      if (!introSeen) {
         try { sessionStorage.setItem('intro-seen', '1'); } catch (_) {}
         document.documentElement.classList.add('intro-playing');
         window.introWatchdog = setTimeout(function () {

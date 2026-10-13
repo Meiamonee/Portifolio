@@ -195,9 +195,3 @@
   .hero-cta .btn{padding:0 8px;font-size:11px}
   .photo-tag{font-size:8px}
 }
-
-html.motion-reduced{scroll-behavior:auto}
-html.motion-reduced .sprig,html.motion-reduced .contact::after{animation:none}
-html.motion-reduced.js .proj-front,html.motion-reduced.js .proj-back{transition:none}
-html.motion-reduced .dock a,html.motion-reduced .dock .t,html.motion-reduced .btn{transition:none}
-html.motion-reduced.js .rv{opacity:1;transform:none;transition:none}
