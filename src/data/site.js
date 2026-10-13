@@ -80,6 +80,7 @@ export const projects = [
     description: 'Aplicação Full Stack com React, Node.js, Express e MongoDB para catálogo de cosméticos. Inclui busca e filtros, autenticação, inventário, compras simuladas e integração com API externa.',
     stack: ['React', 'Node.js', 'Express', 'MongoDB'],
     href: 'https://github.com/Meiamonee/Fortinite-Shop',
+    liveHref: 'https://fortnite-shop-demo.meiamonebr.workers.dev/#/',
   },
   {
     number: '03', category: 'TCC', title: 'Comparador de Preços de Supermercados',

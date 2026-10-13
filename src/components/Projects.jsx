@@ -64,8 +64,14 @@ function ProjectCard({ project, compact }) {
         <h3 className="proj-back-title">{project.title}</h3>
         <p className="proj-desc">{project.description}</p>
         <div className="chips">{project.stack.map((name) => <span className="chip" key={name}>{name}</span>)}</div>
-        <a className="proj-link" href={project.href} target="_blank" rel="noopener noreferrer"
-          onClick={onProjectLinkClick}>Ver no GitHub →</a>
+        <div className="proj-links">
+          <a className="proj-link" href={project.href} target="_blank" rel="noopener noreferrer"
+            onClick={onProjectLinkClick}>Ver no GitHub →</a>
+          {project.liveHref && (
+            <a className="proj-link" href={project.liveHref} target="_blank" rel="noopener noreferrer"
+              onClick={onProjectLinkClick}>Visitar site →</a>
+          )}
+        </div>
       </div>
     </article>
   );

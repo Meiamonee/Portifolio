@@ -86,7 +86,8 @@
   .proj-desc{font-size:14.5px;line-height:1.55;opacity:.85}
   .chips{gap:6px}
   .chip{padding:3px 10px;border:1px solid #5b5b55;border-radius:99px;font-size:12px}
-  .proj-link{margin-top:auto;min-height:44px;padding:6px 0 0;color:#8fd0a0;font-size:14px;font-weight:600;text-decoration:none}
+  .proj-links{margin-top:auto}
+  .proj-link{min-height:44px;padding:6px 0 0;color:#8fd0a0;font-size:14px;font-weight:600;text-decoration:none}
   .job-date{font:600 11px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
   .job h3{margin:6px 0 4px;font:400 24px/1.15 var(--display);letter-spacing:0}
   .job-role{margin:0;color:var(--green);font-weight:600;font-size:14px}

@@ -304,8 +304,9 @@ html.intro-playing,html.intro-playing body{overflow:hidden}
 .proj-desc{margin:0;font-size:16.5px;line-height:1.45}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{border:1.5px solid var(--paper);padding:2px 12px;border-radius:2px;font-weight:500;font-size:14px}
+.proj-links{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:auto}
 .proj-link{
-  display:inline-block;margin-top:auto;align-self:flex-start;
+  display:inline-block;align-self:flex-start;
   min-height:44px;padding:10px 0;
   font-weight:700;color:var(--mint);
   text-decoration-thickness:2px;text-underline-offset:5px;
@@ -519,7 +520,8 @@ html.intro-playing,html.intro-playing body{overflow:hidden}
   .proj-back{padding:16px 0 0;gap:16px;background:transparent;color:var(--ink)}
   .proj-desc{font-size:16px;line-height:1.5}
   .chip{border:1px solid var(--rule);font-family:var(--mono);font-size:10px;padding:5px 8px}
-  .proj-link{color:var(--green);font-size:15px;margin-top:0}
+  .proj-links{margin-top:0}
+  .proj-link{color:var(--green);font-size:15px}
   .job{position:relative;padding:0 0 28px 20px;border-bottom:0;border-left:1px solid var(--rule);gap:10px}
   .job:last-child{padding:8px 0 0 20px}
   .job::before{content:"";position:absolute;left:-4px;top:5px;width:7px;height:7px;background:var(--green)}
