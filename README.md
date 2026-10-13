@@ -33,7 +33,6 @@ npm run preview
 - `public/assets/`: vídeo de abertura, fotos, fontes e ícones locais.
 - `dist/`: resultado gerado por `npm run build`; não editar manualmente.
 - `scripts/prepare_intro.py`: conversão reprodutível do vídeo original.
-- `.openai/hosting.json`: configuração de hospedagem.
 
 ## Interações
 
